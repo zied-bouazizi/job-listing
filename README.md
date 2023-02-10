@@ -1,24 +1,36 @@
-## **JobsPortal**
+# job-listing
 
-Jobs portal application with Laravel 9 and MySQL
+An application for job listing with Laravel 9 and MySQL
 
-**Requirements**
+## Usage
 
-Check Laravel 9 Requirements: https://laravel.com/docs/9.x
-
-**Installation**
-
--   Install Dependencies
-```sh
+### Install Dependency
+```
 composer install
 ```
--   Set Database Credentials & App Settings in `.env` file
 
--   Migrate Database
-```sh
+### Database Setup
+Setup a database and then add your db credentials (database, username and password) to `.env`
+
+### Migrations
+To create all the nessesary tables and columns, run the following
+```
 php artisan migrate
 ```
--   Database Seed
-```sh
+
+### Seeding The Database
+To add dummy data, run the following
+```
 php artisan db:seed
+```
+
+### File Uploading
+When uploading files, they go to "storage/app/public". Create a symlink with the following command to make them publicly accessible
+```
+php artisan storage:link
+```
+
+### Running Then App
+```
+php artisan serve
 ```
